@@ -22,7 +22,7 @@ jobs:
     - name: lint
       run: |
         go get -u golang.org/x/lint/golint
-        export PATH=PATH:$GOPATH/bin
+        export PATH=PATH:$(go path GOROOT)/bin/
         golint ./...
 
     - name: test

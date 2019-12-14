@@ -22,7 +22,7 @@ jobs:
     - name: lint
       run: |
         go get -u golang.org/x/lint/golint
-        export PATH=PATH:$(go path GOROOT)/bin/
+        export PATH="$PATH:$(go env GOPATH)/bin"
         golint ./...
       env:
         GO111MODULE: off
